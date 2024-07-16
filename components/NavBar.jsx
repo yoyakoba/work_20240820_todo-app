@@ -28,25 +28,14 @@ const NavBar = () => {
     <div className="nav-container" data-testid="navbar">
       <Navbar color="light" light expand="md">
         <Container>
-          <NavbarBrand className="logo" />
           <NavbarToggler onClick={toggle} data-testid="navbar-toggle" />
           <Collapse isOpen={isOpen} navbar>
             <Nav className="mr-auto" navbar data-testid="navbar-items">
-              <NavItem>
-                <PageLink href="/" className="nav-link" testId="navbar-home">
-                  Home
-                </PageLink>
-              </NavItem>
               {user && (
                 <>
                   <NavItem>
-                    <PageLink href="/csr" className="nav-link" testId="navbar-csr">
-                      Client-side rendered page
-                    </PageLink>
-                  </NavItem>
-                  <NavItem>
-                    <PageLink href="/ssr" className="nav-link" testId="navbar-ssr">
-                      Server-side rendered page
+                    <PageLink href="/todos" className="nav-link" testId="navbar-todos">
+                      Todo App
                     </PageLink>
                   </NavItem>
                   <NavItem>
