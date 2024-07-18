@@ -2,63 +2,45 @@
 
 import React from 'react';
 import { withPageAuthRequired } from '@auth0/nextjs-auth0/client';
-import TodoItem from "../../components/TodoItem";
-import { useState } from "react";
+import 'react-calendar/dist/Calendar.css';
+import { useState, useEffect } from "react";
+import Calendar from 'react-calendar';
+import { createContext } from 'react';
+import '../todos/todo.css';
+import { CreateTask } from '../../components/Task';
+import { CreateToDoList } from '../../components/TodoList';
+
+
+export const AppContext = createContext();
 
 export default withPageAuthRequired(function TodoPage() {
-    const [inputText, setInputText] = useState("");
-    const [items, setItems] = useState([]);
+  const [value, setValue] = useState(new Date());
+  const [task, setTask]=  useState({})
+  const [toDoList, setToDoList] = useState([]);
 
-    function handleChange(event) {
-        const newValue = event.target.value;
-        setInputText(newValue);
-    }
-
-    function addItem() {
-        setItems((prevItems) => {
-            return [...prevItems, inputText];
-        });
-        setInputText("");
-    }
-    function deleteItem(id) {
-        setItems((prevItems) => {
-            return prevItems.filter((_item, index) => {
-                return index !== id;
-            });
-        });
-    }
-
-    const handleSearch = () => {
-        const filteredTodos = todos.filter((todo) =>
-          todo.text.toLowerCase().includes(searchQuery.toLowerCase())
-        );
-        setItems(filteredTodos);
-      };
-      
+  const ChangeDate = (event) =>{
+    setValue(event);
+    let nday = event.getDate();
+    let nmonth = event.getMonth()+1 ;
+    let nyear = event.getFullYear();
+             
+    setTask({...task, day:nday, month: nmonth, year:nyear});     
+               
+  };
+  useEffect(()=>{ChangeDate(new Date())},[]);
+  
   return (
-    <div className="taskscontainer">
-    <div className="heading">
-        <h1>To-Do List</h1>
-    </div>
-    <div className="form">
-        <input onChange={handleChange} type="text" value={inputText} />
-        <button onClick={addItem}>
-            <span>Add</span>
-        </button>
-    </div>
-    <div>
-        <ul>
-            {items.map((todoItem, index) => (
-                <TodoItem
-                    key={index}
-                    id={index}
-                    text={todoItem}
-                    isChecked={deleteItem}
-                />
-            ))}
-        </ul>
-    </div>
-    
+    <div className='min-h-max bg-gradient-to-r from-[#666fff] to-[#1cccab] mb-0'>
+    <AppContext.Provider value= {{value, task, toDoList , setTask, setToDoList}}>
+      <div className=' grid grid-cols-1 gap-[3%] justify-center '>
+        <Calendar className={' mt-[10%] rounded-3xl px-1 shadow-xl justify-center justify-self-center'} onChange={ChangeDate} value={value} />
+        <CreateTask/>
+        <CreateToDoList/>
+
+      </div>
+    </AppContext.Provider>
+
     </div>
   );
 });
+
