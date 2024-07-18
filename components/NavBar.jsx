@@ -38,11 +38,6 @@ const NavBar = () => {
                       Todo App
                     </PageLink>
                   </NavItem>
-                  <NavItem>
-                    <PageLink href="/external" className="nav-link" testId="navbar-external">
-                      External API
-                    </PageLink>
-                  </NavItem>
                 </>
               )}
             </Nav>
