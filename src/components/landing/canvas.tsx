@@ -19,7 +19,7 @@ export function Canvas(props: { className: string }) {
               x,
               y,
               r: R(x, y, time),
-              g: G(x, y, time),
+              // g: G(x, y, time),
               b: B(x, y, time),
             })
           }

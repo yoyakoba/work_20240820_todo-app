@@ -38,7 +38,6 @@ export default async function SignIn({ searchParams }: Props) {
 								helped me deliver stunning designs to my clients faster than
 								ever before.&rdquo;
 							</p>
-							<footer className='text-sm'>Sofia Davis</footer>
 						</blockquote>
 					</div>
 				</div>
@@ -68,8 +67,8 @@ export default async function SignIn({ searchParams }: Props) {
 							</CardHeader>
 							<Divider />
 							<CardBody>
-								<small>email: test@test.com</small>
-								<small>password: secret</small>
+								<small>email: test@hackaton.com</small>
+								<small>password: test123!</small>
 							</CardBody>
 						</Card>
 						<AuthForm

@@ -37,7 +37,6 @@ export default async function SignIn({ searchParams }: Props) {
                 helped me deliver stunning designs to my clients faster than
                 ever before.&rdquo;
               </p>
-              <footer className="text-sm">Sofia Davis</footer>
             </blockquote>
           </div>
         </div>
