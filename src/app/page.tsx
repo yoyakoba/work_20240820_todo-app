@@ -1,5 +1,7 @@
 import LandingPageMenu from "@/components/landing/landingpage-menu"
 import { Canvas } from "@/components/landing/canvas"
+import { Separator } from "@/components/ui/separator"
+import { Github } from "lucide-react"
 import Link from "next/link"
 import { Button } from "@nextui-org/react"
 import Particles from "@/components/landing/particle"
@@ -11,7 +13,7 @@ export default async function Home() {
         <LandingPageMenu />
         <section
           id="hero"
-          className="container mx-auto mt-20 mb-10 flex flex-col justify-center items-center sm:my-24 md:my-32 lg:my-28"
+          className="container mx-auto mt-20 mb-8 flex flex-col justify-center items-center sm:my-24 md:my-32 lg:my-28"
         >
           <Particles
             className="absolute inset-0 -z-10 animate-fade-in"
@@ -24,20 +26,17 @@ export default async function Home() {
             Welcome to QA Hackaton
           </h1>
 
-          <div className="w-full md:w-1/2 flex flex-col mt-14 justify-center items-center">
-            <p className="font-medium text-primary md:text-background text-sm text-center mb-4 md:mt-0 md:text-md xl:text-lg xl:text-white xl:mt-20 2xl:mt-0 2xl:text-background">
-              &quot;Empowering Innovation Through Quality Assurance: Integrating Automation and Manual Testing for Seamless Solutions. Join us at the QA Hackathon to Unveil the Future, One Test at a Time!&quot;
+          <div className="w-full md:w-1/2 flex flex-col mt-10 justify-center items-center">
+            <p className="font-medium text-primary md:text-background text-sm text-center mb-2 md:mt-0 md:text-md xl:text-lg xl:text-white xl:mt-20 2xl:mt-0 2xl:text-background">
+              &quot;Empowering Innovation Through Quality Assurance: Integrating Automation and Manual Testing to Unveil the Future, One Test at a Time!&quot;
             </p>
             <Link href="/todo">
-              <Button color="primary" className="md:w-60 h-10 xl:mt-5">
+              <Button color="primary" className="md:w-60 xl:mt-2">
                 Get start now
               </Button>
             </Link>
           </div>
         </section>
-        <footer className="text-xs bg-accent text-secondary text-center px-8 py-4 border-t border-zinc-600">
-          <p className="text-zinc-400 ">Todo App. All right reserved. © 2024</p>
-        </footer>
       </div>
       <Canvas className="absolute z-[1]" />
     </>

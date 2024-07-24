@@ -68,7 +68,7 @@ export default async function SignIn({ searchParams }: Props) {
 							<Divider />
 							<CardBody>
 								<small>email: test@hackaton.com</small>
-								<small>password: Test123!</small>
+								<small>password: test123!</small>
 							</CardBody>
 						</Card>
 						<AuthForm

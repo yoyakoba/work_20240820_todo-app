@@ -42,10 +42,11 @@ export async function AppSideBar({ className }: SidebarProps) {
       )}
       open={true}
     >
+      <CollapsibleContent className="space-y-4 py-4">
         <div className="px-3 py-2">
           <div className="mb-4 flex justify-between items-center">
             <h2 className="px-4 text-lg font-semibold tracking-tight">
-              {user?.name}
+                {user?.name}
             </h2>
           </div>
           <div className="space-y-1">
@@ -55,6 +56,7 @@ export async function AppSideBar({ className }: SidebarProps) {
             </Button>
           </div>
         </div>
+      </CollapsibleContent>
     </Collapsible>
   )
 }
