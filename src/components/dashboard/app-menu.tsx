@@ -39,7 +39,7 @@ export function AppMenu() {
             <MenubarItem
               onClick={() => signOut({ redirect: true, callbackUrl: "/todo" })}
             >
-              Quit <MenubarShortcut>⌘Q</MenubarShortcut>
+              Signout <MenubarShortcut>⌘Q</MenubarShortcut>
             </MenubarItem>
           </MenubarContent>
         </MenubarMenu>

@@ -1,7 +1,5 @@
 import LandingPageMenu from "@/components/landing/landingpage-menu"
 import { Canvas } from "@/components/landing/canvas"
-import { Separator } from "@/components/ui/separator"
-import { Github } from "lucide-react"
 import Link from "next/link"
 import { Button } from "@nextui-org/react"
 import Particles from "@/components/landing/particle"

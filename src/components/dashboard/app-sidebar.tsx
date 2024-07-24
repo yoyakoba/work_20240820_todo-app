@@ -45,20 +45,8 @@ export async function AppSideBar({ className }: SidebarProps) {
         <div className="px-3 py-2">
           <div className="mb-4 flex justify-between items-center">
             <h2 className="px-4 text-lg font-semibold tracking-tight">
-              Hi, {user?.name}
+              {user?.name}
             </h2>
-            <CollapsibleTrigger>
-              <TooltipProvider>
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <ChevronsLeft className="mr-2 h-4 w-4 cursor-pointer rounded-sm hover:bg-secondary/80" />
-                  </TooltipTrigger>
-                  <TooltipContent>
-                    <p>Collapse</p>
-                  </TooltipContent>
-                </Tooltip>
-              </TooltipProvider>
-            </CollapsibleTrigger>
           </div>
           <div className="space-y-1">
             <Button variant="secondary" className="w-full justify-start">
