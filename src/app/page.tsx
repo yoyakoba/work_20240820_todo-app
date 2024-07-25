@@ -23,7 +23,7 @@ export default async function Home() {
             className="w-3/4
            font-bold min-[270px]:text-[2.2rem] min-[370px]:text-[2.4rem] min-[420px]:text-[2.7rem] xs:text-[2.7rem] mb-4 bg-clip-text text-center  text-transparent bg-gradient-to-r from-primary via-foreground-500 to-primary md:text-5xl xl:text-8xl"
           >
-            Welcome to QA Hackaton
+            Welcome to QA Hackathon
           </h1>
 
           <div className="w-full md:w-1/2 flex flex-col mt-10 justify-center items-center">

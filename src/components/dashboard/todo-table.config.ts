@@ -16,7 +16,7 @@ export const columnsTodo: CustomTodoColumns[] = [
 export const statusTodoOptions: StatusTodoOptions<Todo["status"]>[] = [
   { value: "Active", key: "ACTIVE" },
   { value: "Completed", key: "COMPLETED" },
-  { value: "Block", key: "BLOCK" },
+  { value: "Block", key: "BLOCK" }
 ]
 
 export const statusColorMap: Record<string, ChipProps["color"]> = {

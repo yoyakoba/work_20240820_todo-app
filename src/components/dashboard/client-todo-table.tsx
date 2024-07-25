@@ -465,7 +465,7 @@ export default function ClientTodoTable({
         )}
       </TableHeader>
       <TableBody
-        emptyContent={"You doesn't have any todo. Create one 🤩"}
+        emptyContent={"This display appears because either you have no tasks, or we couldn't find what you're looking for."}
         items={sortedItems}
       >
         {(item) => (

@@ -239,7 +239,6 @@ export default function CreateTodoModal({
                             className="max-w-full"
                             selectedKeys={[field.value]}
                             onChange={(e) => field.onChange(e.target.value)}
-                            disabledKeys={["OTHER"]}
                             renderValue={(items) => (
                               <span>
                                 {items.map((item) => (

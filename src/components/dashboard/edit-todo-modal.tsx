@@ -258,7 +258,6 @@ export default function EditTodoModal({
                             className="max-w-full"
                             selectedKeys={[field.value]}
                             onChange={(e) => field.onChange(e.target.value)}
-                            disabledKeys={["OTHER"]}
                             renderValue={(items) => (
                               <span>
                                 {items.map((item) => (
@@ -278,7 +277,7 @@ export default function EditTodoModal({
                               </span>
                             )}
                           >
-                            {["ACTIVE", "COMPLETED", "BLOCK", "OTHER"].map(
+                            {["ACTIVE", "COMPLETED", "BLOCK", "TODO"].map(
                               (status) => (
                                 <SelectItem
                                   color="secondary"
