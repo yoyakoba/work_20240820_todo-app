@@ -56,12 +56,12 @@ const rows = [
   },
   {
     key: "11",
-    no: "1",
+    no: "11",
     stories: "As a user, I want to search for specific to-do items by keywords so that I can quickly find tasks related to certain topics or criteria."
   },
   {
     key: "12",
-    no: "1",
+    no: "12",
     stories: "As a user, I want to toggle between dark mode and light mode so that I can choose the theme that is easiest on my eyes."
   },
 
